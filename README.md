@@ -36,7 +36,7 @@ The detail of the computation and theorms is shown in our paper [Constrained bil
 
 An example of the code is shown in [example.py](./constrained_bilevel_opt/example.py). 
 
-
+If you have more questions, fell free to contact me {spx5032@psu.edu}.
 
 Here is the citation informoation for our paper [Constrained bilevel optimization](https://arxiv.org/abs/2302.01970).
 ```
