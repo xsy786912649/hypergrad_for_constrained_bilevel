@@ -24,7 +24,7 @@ Then, we have $\nabla_x L(y^{\star}(x), \mu(x), ν(x))=0$ if $\mu(x)>0$.
   
  * To fit the form in [Hypergrad](https://github.com/prolearner/hypertorch), we rewrite it as $[y^{\star}(x), \mu(x), ν(x)]^{\top}=[y^{\star}(x), \mu(x), ν(x)]^{\top}-\nabla_x L(y^{\star}(x), \mu(x), ν(x))$. 
   
- * Fit the form to [Hypergrad](https://github.com/prolearner/hypertorch) (Please first look through this link or view the introduction to it which is shown in the end). Here, 
+ * Fit the form to [Hypergrad](https://github.com/prolearner/hypertorch). Here, 
 >$x$ corresponds the notation $\lambda$; 
 
 >$[y^{\star}(x), \mu(x), ν(x)]^{\top}$ corresponds the notation of $w(\lambda)$; 
