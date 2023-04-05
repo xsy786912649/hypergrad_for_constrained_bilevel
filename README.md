@@ -11,11 +11,26 @@ Please first view how to use package Hypergrad. A brief introduction for Hypergr
 
  ![1bilevel](./resources/constrained_bilevel.png)
 
- * First, solve the inner level problem $y^*(x)={\arg\min}_y \{g(x,y): p(x,y)\leq 0; q(x,y)=0\}$, to get the solution $y^*(x)$, $\mu(x)$ and $v(x)$. Here, $(\mu(x), v(x))$ are Lagrange multipliers when $x$ is given and $\mu(x) \geq 0$.
- * The Lagrangian is $L(y^*(x), \mu(x), ν(x)) = g(x, y^*(x))+\mu(x)p(x,y^*(x))+v(x)q(x,y^*(x)).$ From the KKT condition achieved at the point  $(y^*(x), \mu(x), v(x))$, we have $\nabla_1 L(y^*(x), \mu(x), ν(x))=0$ and $\nabla_3 L(y^*(x), \mu(x), ν(x))=0$ (usually written as $q(x,y^*(x))=0$ in the KKT condition). Moreoever, if $\mu(x)>0$, we have $\nabla_2 L(y^*(x), \mu(x), ν(x))=0$ (usually written as $\mu(x) p(x,y^*(x))=0$ in the KKT condition). Then, we have $\nabla_x L(y^*(x), \mu(x), ν(x))=0$ if $\mu(x)>0$.
- * To fit the form in [Hypergrad](https://github.com/prolearner/hypertorch), we rewrite it as $[y^*(x), \mu(x), ν(x)]^{\top}=[y^*(x), \mu(x), ν(x)]^{\top}-\nabla_x L(y^*(x), \mu(x), ν(x))$. 
- * Fit the form to [Hypergrad](https://github.com/prolearner/hypertorch) (Please first look through this link or view the introduction to it which is shown in the end). Here, $x$ corresponds the notation [$\lambda$](https://github.com/prolearner/hypertorch); $[y^*(x), \mu(x), ν(x)]^{\top}$ corresponds the notation of [$w(\lambda)$](https://github.com/prolearner/hypertorch); and $[y^*(x), \mu(x), ν(x)]^{\top}-\nabla_x L(y^*(x), \mu(x), ν(x))$ corresponds the map [$\Phi(w(\lambda),\lambda)$](https://github.com/prolearner/hypertorch).
- * If $\mu_i(x)=0$, we can remove $\mu_i(x)$ and $q_i(x,y^*(x))$ from the computation.
+ * First, solve the inner level problem $y^{\star}(x)={\arg\min}_y \{g(x,y): p(x,y)\leq 0; q(x,y)=0\}$, to get the solution $y^{\star}(x)$, $\mu(x)$ and $v(x)$. Here, $(\mu(x), v(x))$ are Lagrange multipliers when $x$ is given and $\mu(x) \geq 0$.
+  
+ * The Lagrangian is $L(y^{\star}(x), \mu(x), ν(x)) = g(x, y^{\star}(x))+\mu(x)p(x,y^{\star}(x))+v(x)q(x,y^{\star}(x)).$ From the KKT condition achieved at the point  $(y^{\star}(x), \mu(x), v(x))$, we have 
+>$\nabla_1 L(y^{\star}(x), \mu(x), ν(x))=0$, 
+
+> $\nabla_3 L(y^{\star}(x), \mu(x), ν(x))=0$ (usually written as $q(x,y^{\star}(x))=0$ in the KKT condition), 
+
+> Moreoever, if $\mu(x)>0$, we have $\nabla_2 L(y^{\star}(x), \mu(x), ν(x))=0$ (usually written as $\mu(x) p(x,y^{\star}(x))=0$ in the KKT condition). 
+ 
+Then, we have $\nabla_x L(y^{\star}(x), \mu(x), ν(x))=0$ if $\mu(x)>0$.
+  
+ * To fit the form in [Hypergrad](https://github.com/prolearner/hypertorch), we rewrite it as $[y^{\star}(x), \mu(x), ν(x)]^{\top}=[y^{\star}(x), \mu(x), ν(x)]^{\top}-\nabla_x L(y^{\star}(x), \mu(x), ν(x))$. 
+  
+ * Fit the form to [Hypergrad](https://github.com/prolearner/hypertorch) (Please first look through this link or view the introduction to it which is shown in the end). Here, 
+>$x$ corresponds the notation $\lambda$; 
+
+>$[y^{\star}(x), \mu(x), ν(x)]^{\top}$ corresponds the notation of $w(\lambda)$; 
+
+>$[y^{\star}(x), \mu(x), ν(x)]^{\top}-\nabla_x L(y^{\star}(x), \mu(x), ν(x))$ corresponds the map $\Phi(w(\lambda),\lambda)$.
+ * If $\mu_i(x)=0$, we can remove $\mu_i(x)$ and $q_i(x,y^{\star}(x))$ from the computation.
 
 The detail of the computation and theorms is shown in our paper [Constrained bilevel optimization](https://arxiv.org/abs/2302.01970).
 
