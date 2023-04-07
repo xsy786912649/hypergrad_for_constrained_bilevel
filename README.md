@@ -38,7 +38,7 @@ An example of the code is shown in [example.py](./constrained_bilevel_opt/exampl
 
 If you have more questions, fell free to contact me {spx5032@psu.edu}.
 
-Here is the citation informoation for our paper [Constrained bilevel optimization](https://arxiv.org/abs/2302.01970).
+If you find our code useful, please consider citing our work. Here is the citation informoation for our paper [Constrained bilevel optimization](https://arxiv.org/abs/2302.01970).
 ```
 @INPROCEEDINGS{ SX-MZ:AAAI23, 
     author = { Xu, Siyuan and Zhu, Minghui },
