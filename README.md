@@ -40,12 +40,15 @@ If you have more questions, fell free to contact me {spx5032@psu.edu}.
 
 If you find our code useful, please consider citing our work. Here is the citation informoation for our paper [Constrained bilevel optimization](https://arxiv.org/abs/2302.01970).
 ```
-@INPROCEEDINGS{ SX-MZ:AAAI23, 
-    author = { Xu, Siyuan and Zhu, Minghui },
-    title = { Efficient gradient approximation method for constrained bilevel optimization },	 
-    booktitle = { AAAI Conference on Artificial Intelligence }, 
-    year = { 2023 },    
-}
+@article{Xu_Zhu_2023,
+title={Efficient Gradient Approximation Method for Constrained Bilevel Optimization},
+volume={37},
+number={10},
+journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+author={Xu, Siyuan and Zhu, Minghui},
+year={2023},
+month={Jun.},
+pages={12509-12517} }
 ```
  
 # Hypergrad
